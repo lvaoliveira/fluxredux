@@ -6,7 +6,7 @@ MobAcademy
 Create Project
 ---
 ```
-git clone https://github.com/Mobiquity/Mobiquity-Europe-Academy.git
+git clone https://github.com/lvaoliveira/fluxredux
 ```
 
 

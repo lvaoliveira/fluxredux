@@ -17,7 +17,7 @@
     margin-left: -10px;
   }
 
-  &> li i {
+  &> li i.timeLine--icon {
     width: 50px;
     height: 50px;
     text-transform: none;
@@ -37,4 +37,21 @@
   &> li div {
     position: relative; 
   }
+}
+.listItem--add {
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  padding: 6px;
+  font-size: 21px;
+  line-height: 6.428571;
+  background-color: #45c203;
+  border: 1px solid #45c203;
+  border-radius: 50% !important;
+  color: #fff;
+  position: fixed;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 10;
+  right: 10px;
 }

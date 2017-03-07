@@ -27,6 +27,7 @@
     "babel-preset-react": "^6.11.1",
     "express": "^4.14.0",
     "file-loader": "^0.10.0",
+    "flux": "^3.1.2",
     "font-awesome-webpack": "0.0.5-beta.2",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",

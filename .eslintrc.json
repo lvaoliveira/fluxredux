@@ -10,7 +10,8 @@
         "react/jsx-uses-vars": "error",
         "arrow-body-style": [2, "as-needed"],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "react/prefer-stateless-function": "off"
+        "react/prefer-stateless-function": "off",
+        "class-methods-use-this": "off"
     },
     "parserOptions": {
         "ecmaFeatures": {

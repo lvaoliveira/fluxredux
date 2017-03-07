@@ -1,28 +1,50 @@
 import React from 'react';
 import Item from '../item/item';
+import ListItemStore from './listItem.store';
 
-import data from '../../data';
-
+function getInitialState() {
+  return {
+    items: ListItemStore.getItem(),
+  };
+}
 class ListItem extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      user: false,
-    };
+    this.state = getInitialState();
   }
+  componentDidMount() {
+    ListItemStore.addChangeListener(this.onChange.bind(this));
+  }
+
+  onChange() {
+    this.setState(getInitialState());
+  }
+
   renderItems(item, i) {
-    console.log(item);
     return (
-      <Item time={item.time} date={item.date} title={item.title} text={item.text} origin={item.origin} key={i} />
+      <li key={i}>
+        <Item
+          time={item.time}
+          date={item.date}
+          title={item.title}
+          text={item.text}
+          origin={item.origin}
+          new={false}
+        />
+      </li>
     );
   }
+
   render() {
     return (
-      <ul className="listItem--wrapper">
-        <li>
-          { data.map(this.renderItems) }
-        </li>
-      </ul>
+      <div>
+        <ul className="listItem--wrapper">
+          <li>
+            <Item origin="file" />
+          </li>
+          { this.state.items.map(this.renderItems) }
+        </ul>
+      </div>
     );
   }
 }

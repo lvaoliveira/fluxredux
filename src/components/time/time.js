@@ -1,18 +1,19 @@
 import React from 'react';
 
 class Time extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      user: false,
-    };
-  }
   render() {
-    console.log(this.props);
     const { time, date } = this.props;
     return (
-      <time className="listItem--time"><span>{ date }</span> <span>{ time } </span></time>   
+      <time className="listItem--time"><span>{ date }</span> <span>{ time } </span></time>
     );
   }
 }
+Time.propTypes = {
+  time: React.PropTypes.string,
+  date: React.PropTypes.string,
+};
+Time.defaultProps = {
+  time: '',
+  date: '',
+};
 export default Time;
